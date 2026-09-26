@@ -9,11 +9,63 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 </head>
-<body>
-    <nav>
-
+<body class="box-border w-[100vw] h-[100vh]">
+    <nav class="p-[2rem] flex justify-between items-center ">
+        <div class="size-[4rem]">
+          <img src="./images/mett.jpg" alt="logo">
+        </div>
+        <ul class="text-[1.1rem] text-white flex gap-6 items-center">
+            <li>
+                <a href="#prevision">Prevision</a>
+            </li>
+            <li>
+                <a href="#climate change">Climate change</a>
+            </li>
+            <li>
+                <a href="#News">News</a>
+            </li>
+            <li>
+                <a href="#map">Map</a>
+            </li>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+        <button class="border-[0.1rem] rounded-[0.6rem] w-[6rem] h-[3rem]">
+            <a class="text-[1.2rem] text-white" href="#">Sign Up</a>
+        </button>
     </nav>
-
+    <div>
+        <h1 class="text-[2.8rem] text-white text-center ">Weather</h1>
+        <form action="" class="text-center">
+            <div class="suggest relative top-[1rem]">
+              <label class="text-[1.5rem]" for="ville"> Ville : </label>
+              <input id="city" type="text" class="border-[0.1rem] text-[grey] py-[1.1rem] rounded-[0.6rem] w-[16rem] h-[2rem] " placeholder="entrer votre ville">
+            </div>
+            <ul id="suggestion"></ul>
+            <input value="view" id="buton" type="submit" class="cursor-pointer border-[0.1rem] py-[0.6rem] relative left-[2rem] rounded-[1rem] border-[] text-white top-[4rem] text-[1.1rem] px-7 bg-[red]" >
+        </form>
+    </div>
+    <div id="weather" class="relative top-[5rem] flex justify-center items-center">
+        <div id="cloudIcon" class="text-[18rem] left-[24rem] relative ">
+            <span><i class="fa-solid fa-cloud-sun" style="color: rgb(173, 217, 249);"></i></span>
+        </div>
+        <h1 id="feels" class="relative top-[17rem] left-[rem] text-[10rem]"></h1>
+        <h3 id="city"></h3>
+        <div class="relative top-[30rem] right-[17rem] flex gap-[3rem]">
+            <div class="relative right-[6rem] text-[2rem] ">
+                <span></span>
+                <h2 id="humous"></h2>
+            </div>
+            <div class="relative flex gap-[1rem] right-[3.5rem] text-[2rem]">
+                <span><i class="text-[1.6rem] fa-solid fa-wind"></i></span>
+                <div class="text-[2rem]">
+                  <h2 id="windy"></h>
+                </div> 
+            </div>
+        </div>
+        
+    </div>
 
 
     <script src="index.js"></script>
